@@ -40,9 +40,9 @@ class ItemsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.destinationViewController {
         case let viewController as BrowserViewController:
-            let itemCell = sender as! ItemCell
-            viewController.URL = itemCell.item?.itemURL
-            break
+            if let itemCell = sender as? ItemCell {
+                viewController.URL = itemCell.item?.itemURL
+            }
         default:()
         }
     }
