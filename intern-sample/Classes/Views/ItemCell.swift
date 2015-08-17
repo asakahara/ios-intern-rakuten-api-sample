@@ -30,7 +30,7 @@ class ItemCell: UITableViewCell {
 extension Int {
     var decimalFormat: String? {
         get {
-            var formatter = NSNumberFormatter()
+            let formatter = NSNumberFormatter()
             formatter.numberStyle = .DecimalStyle
             formatter.groupingSeparator = ","
             formatter.groupingSize = 3
